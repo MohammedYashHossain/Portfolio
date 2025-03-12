@@ -927,49 +927,21 @@
 }
 
 .carousel-slides .project-card {
-    display: flex;
-    flex-direction: column;
     min-width: 100%;
     max-width: 800px;
     margin: 0 auto;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
     transform: scale(0.95);
     transition: transform 0.3s ease;
-    border-radius: 8px;
-    overflow: hidden;
 }
 
-/* Force square image dimensions on desktop */
-.project-card img {
-    width: 100%;
-    height: 0;
-    padding-top: 100%; /* Creates a square aspect ratio */
-    background-size: cover;
-    background-position: center;
-}
-
-/* Alternative approach - if the above doesn't work */
+/* Fixed square image style */
 .project-img {
-    position: relative;
-    width: 100%;
-    padding-bottom: 100%; /* Creates a square aspect ratio */
-    overflow: hidden;
-}
-
-.project-img img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    width: 400px; /* Set to desired width */
+    height: 400px; /* Same as width for square */
+    margin: 0 auto; /* Center horizontally */
     object-fit: cover;
-}
-
-.project-content {
-    flex: 1;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
+    object-position: center;
 }
 
 .carousel-slides .project-card.active {
@@ -1035,6 +1007,10 @@
     
     .carousel-nav {
         margin-top: 20px;
+    }
+    
+    .project-img {
+        height: 300px; /* Keep the same fixed height on mobile */
     }
 }
 </style>
