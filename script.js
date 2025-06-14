@@ -104,78 +104,56 @@ window.addEventListener('scroll', function() {
 });
 
 // Carousel functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const carousel = document.querySelector('.carousel-slides');
-    const slides = document.querySelectorAll('.project-card');
-    const dots = document.querySelectorAll('.dot');
-    const prevBtn = document.querySelector('.prev-btn');
-    const nextBtn = document.querySelector('.next-btn');
-    let currentIndex = 0;
-    const slideWidth = 100; // 100% width
-    
-    // Initialize carousel
-    function initCarousel() {
-        // Set to its initial position
-        updateCarousel();
-        
-        // Add event listeners
-        prevBtn.addEventListener('click', prevSlide);
-        nextBtn.addEventListener('click', nextSlide);
-        
-        // Add dot click events
-        dots.forEach(dot => {
-            dot.addEventListener('click', function() {
-                currentIndex = parseInt(this.getAttribute('data-index'));
-                updateCarousel();
-            });
-        });
-        
-        // Add touch events for mobile
-        let startX, endX;
-        carousel.addEventListener('touchstart', function(e) {
-            startX = e.touches[0].clientX;
-        });
-        
-        carousel.addEventListener('touchend', function(e) {
-            endX = e.changedTouches[0].clientX;
-            if (startX - endX > 50) { // Swipe left
-                nextSlide();
-            } else if (endX - startX > 50) { // Swipe right
-                prevSlide();
-            }
-        });
-        
-        // Set first slide as active
-        updateActiveState();
-    }
-    
-    function updateCarousel() {
-        carousel.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
-        updateActiveState();
-    }
-    
-    function updateActiveState() {
-        // Update dots
-        dots.forEach((dot, index) => {
-            dot.classList.toggle('active', index === currentIndex);
-        });
-        
-        // Update slides
-        slides.forEach((slide, index) => {
-            slide.classList.toggle('active', index === currentIndex);
-        });
-    }
-    
-    function nextSlide() {
-        currentIndex = (currentIndex + 1) % slides.length;
-        updateCarousel();
-    }
-    
-    function prevSlide() {
-        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-        updateCarousel();
-    }
-    
-    // Initialize carousel after page loads
-    initCarousel();
+const carousel = document.querySelector('.carousel-slides');
+const dots = document.querySelectorAll('.carousel-dot');
+let currentSlide = 0;
+const slideWidth = document.querySelector('.project-card').offsetWidth;
+const totalSlides = document.querySelectorAll('.project-card').length;
+
+// Update dots to show all slides
+dots.forEach((dot, index) => {
+    dot.style.display = 'block';
 });
+
+function updateCarousel() {
+    carousel.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+    dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentSlide);
+    });
+}
+
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        currentSlide = index;
+        updateCarousel();
+    });
+});
+
+// Touch events for mobile
+let touchStartX = 0;
+let touchEndX = 0;
+
+carousel.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].clientX;
+});
+
+carousel.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].clientX;
+    handleSwipe();
+});
+
+function handleSwipe() {
+    const swipeThreshold = 50;
+    const diff = touchStartX - touchEndX;
+
+    if (Math.abs(diff) > swipeThreshold) {
+        if (diff > 0 && currentSlide < totalSlides - 1) {
+            // Swipe left
+            currentSlide++;
+        } else if (diff < 0 && currentSlide > 0) {
+            // Swipe right
+            currentSlide--;
+        }
+        updateCarousel();
+    }
+}
