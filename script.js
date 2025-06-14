@@ -106,6 +106,8 @@ window.addEventListener('scroll', function() {
 // Carousel functionality
 const carousel = document.querySelector('.carousel-slides');
 const dots = document.querySelectorAll('.carousel-dot');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
 let currentSlide = 0;
 const slideWidth = document.querySelector('.project-card').offsetWidth;
 const totalSlides = document.querySelectorAll('.project-card').length;
@@ -121,6 +123,21 @@ function updateCarousel() {
         dot.classList.toggle('active', index === currentSlide);
     });
 }
+
+// Add click handlers for navigation buttons
+prevBtn.addEventListener('click', () => {
+    if (currentSlide > 0) {
+        currentSlide--;
+        updateCarousel();
+    }
+});
+
+nextBtn.addEventListener('click', () => {
+    if (currentSlide < totalSlides - 1) {
+        currentSlide++;
+        updateCarousel();
+    }
+});
 
 dots.forEach((dot, index) => {
     dot.addEventListener('click', () => {
