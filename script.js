@@ -74,7 +74,6 @@ particlesJS('particles-js', {
     retina_detect: true
 });
 
-// Additional scripts can go here
 // Mobile menu toggle
 document.getElementById('hamburger').addEventListener('click', function() {
     document.querySelector('.nav-menu').classList.toggle('active');
@@ -102,4 +101,81 @@ window.addEventListener('scroll', function() {
     } else {
         header.classList.remove('scrolled');
     }
+});
+
+// Carousel functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const carousel = document.querySelector('.carousel-slides');
+    const slides = document.querySelectorAll('.project-card');
+    const dots = document.querySelectorAll('.dot');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    let currentIndex = 0;
+    const slideWidth = 100; // 100% width
+    
+    // Initialize carousel
+    function initCarousel() {
+        // Set to its initial position
+        updateCarousel();
+        
+        // Add event listeners
+        prevBtn.addEventListener('click', prevSlide);
+        nextBtn.addEventListener('click', nextSlide);
+        
+        // Add dot click events
+        dots.forEach(dot => {
+            dot.addEventListener('click', function() {
+                currentIndex = parseInt(this.getAttribute('data-index'));
+                updateCarousel();
+            });
+        });
+        
+        // Add touch events for mobile
+        let startX, endX;
+        carousel.addEventListener('touchstart', function(e) {
+            startX = e.touches[0].clientX;
+        });
+        
+        carousel.addEventListener('touchend', function(e) {
+            endX = e.changedTouches[0].clientX;
+            if (startX - endX > 50) { // Swipe left
+                nextSlide();
+            } else if (endX - startX > 50) { // Swipe right
+                prevSlide();
+            }
+        });
+        
+        // Set first slide as active
+        updateActiveState();
+    }
+    
+    function updateCarousel() {
+        carousel.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+        updateActiveState();
+    }
+    
+    function updateActiveState() {
+        // Update dots
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+        });
+        
+        // Update slides
+        slides.forEach((slide, index) => {
+            slide.classList.toggle('active', index === currentIndex);
+        });
+    }
+    
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateCarousel();
+    }
+    
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateCarousel();
+    }
+    
+    // Initialize carousel after page loads
+    initCarousel();
 });
