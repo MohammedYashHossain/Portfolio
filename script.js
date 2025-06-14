@@ -128,15 +128,19 @@ function updateCarousel() {
 prevBtn.addEventListener('click', () => {
     if (currentSlide > 0) {
         currentSlide--;
-        updateCarousel();
+    } else {
+        currentSlide = totalSlides - 1; // Loop to last slide
     }
+    updateCarousel();
 });
 
 nextBtn.addEventListener('click', () => {
     if (currentSlide < totalSlides - 1) {
         currentSlide++;
-        updateCarousel();
+    } else {
+        currentSlide = 0; // Loop to first slide
     }
+    updateCarousel();
 });
 
 dots.forEach((dot, index) => {
@@ -164,12 +168,12 @@ function handleSwipe() {
     const diff = touchStartX - touchEndX;
 
     if (Math.abs(diff) > swipeThreshold) {
-        if (diff > 0 && currentSlide < totalSlides - 1) {
+        if (diff > 0) {
             // Swipe left
-            currentSlide++;
-        } else if (diff < 0 && currentSlide > 0) {
+            currentSlide = (currentSlide + 1) % totalSlides;
+        } else {
             // Swipe right
-            currentSlide--;
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
         }
         updateCarousel();
     }
