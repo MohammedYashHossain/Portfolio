@@ -253,9 +253,9 @@ section:nth-child(even) {
 
 .about-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 300px 1fr;
     gap: 40px;
-    align-items: center;
+    align-items: start;
 }
 
 .about-img {
@@ -764,30 +764,30 @@ footer {
     }
 
     .about-grid {
-        grid-template-columns: 1fr !important;
-        gap: 30px !important;
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
-    
     .about-grid img {
-        width: 280px !important;
-        height: 373px !important;
         margin: 0 auto;
         display: block;
+        width: 80vw;
+        max-width: 300px;
+        height: auto;
     }
     
     .about-content h3 {
         text-align: center;
-        margin-bottom: 20px !important;
+        margin-bottom: 20px;
     }
     
     .about-content p {
         text-align: center;
-        margin-bottom: 20px !important;
+        margin-bottom: 20px;
     }
     
     .education-details {
-        margin: 20px 0 !important;
-        padding: 15px !important;
+        margin: 20px 0;
+        padding: 15px;
     }
     
     .education-details h4 {
@@ -801,7 +801,7 @@ footer {
     
     .additional-links {
         justify-content: center;
-        margin-top: 20px !important;
+        margin-top: 20px;
     }
     
     .skills-section {
