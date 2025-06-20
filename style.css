@@ -762,6 +762,19 @@ footer {
     .project-img {
         height: 300px;
     }
+
+    /* Fix About section for mobile */
+    .about-grid {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+    }
+    
+    .about-img {
+        width: 250px !important;
+        height: auto !important;
+        margin: 0 auto !important;
+        display: block !important;
+    }
 }
 
 @media (max-width: 480px) {
