@@ -695,11 +695,13 @@ footer {
 
 @media (max-width: 768px) {
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem !important;
+        line-height: 1.2 !important;
     }
 
     .hero p {
-        font-size: 1.1rem;
+        font-size: 1rem !important;
+        line-height: 1.5 !important;
     }
 
     .nav-menu {
@@ -748,11 +750,12 @@ footer {
     }
 
     .project-title {
-        font-size: 1.3rem;
+        font-size: 1.2rem !important;
     }
     
     .project-desc {
-        font-size: 0.9rem;
+        font-size: 0.9rem !important;
+        line-height: 1.4 !important;
     }
     
     .carousel-nav {
@@ -769,53 +772,71 @@ footer {
     }
     
     .about-grid img {
-        width: 280px !important;
-        height: 373px !important;
-        margin: 0 auto;
+        width: 250px !important;
+        height: 333px !important;
+        margin: 0 !important;
         display: block;
     }
     
     .about-content h3 {
         text-align: left !important;
+        font-size: 1.5rem !important;
+        margin-bottom: 15px !important;
     }
     
     .about-content p {
         text-align: left !important;
+        font-size: 0.95rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .education-details {
+        margin: 20px 0 !important;
+        padding: 15px !important;
     }
     
     .education-details h4 {
         text-align: left !important;
+        font-size: 1.1rem !important;
     }
     
     .education-details p {
         text-align: left !important;
+        font-size: 0.9rem !important;
+        margin-bottom: 8px !important;
     }
     
     .additional-links {
-        justify-content: center;
-        margin-top: 20px;
+        justify-content: flex-start !important;
+        margin-top: 20px !important;
     }
     
-    .skills-section {
-        margin-top: 30px;
+    .additional-links img {
+        height: 35px !important;
     }
     
-    .skills-section .section-title {
-        font-size: 2rem;
-        margin-bottom: 30px;
+    .hero-subtitle {
+        font-size: 1.3rem !important;
     }
     
-    .skill-category {
-        padding: 20px;
+    .hero-description {
+        font-size: 1rem !important;
+        line-height: 1.5 !important;
+    }
+    
+    .section-title {
+        font-size: 2.2rem !important;
+        margin-bottom: 30px !important;
     }
     
     .skill-category h3 {
-        font-size: 1.2rem;
-        text-align: center;
+        font-size: 1.1rem !important;
     }
     
-    .skills-container {
-        justify-content: center;
+    .skill-badge img {
+        width: 35px !important;
+        height: 35px !important;
     }
 }
 
