@@ -783,19 +783,27 @@ footer {
     }
     
     .about-content h3 {
-        font-size: 0.9rem !important;
-        margin-bottom: 10px !important;
+        font-size: 1.2rem !important;
+        margin-bottom: 15px !important;
     }
     
     .about-content p {
-        font-size: 0.7rem !important;
-        line-height: 1.3 !important;
-        margin-bottom: 10px !important;
+        font-size: 0.9rem !important;
+        line-height: 1.4 !important;
+        margin-bottom: 15px !important;
     }
     
-    .additional-links img {
-        height: 25px !important;
-        width: auto !important;
+    .social-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+        margin: 0 5px;
+    }
+    
+    .additional-links {
+        justify-content: space-between;
+        margin-top: 25px;
+        gap: 15px;
     }
 }
 
@@ -876,4 +884,34 @@ footer {
     color: var(--primary);
     font-weight: bold;
     margin-right: 0.5rem;
+}
+
+/* Social buttons styling */
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    margin: 0 10px;
+}
+
+.social-btn:hover {
+    background-color: #a52020;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(193, 37, 37, 0.3);
+}
+
+.additional-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+    gap: 20px;
 }
