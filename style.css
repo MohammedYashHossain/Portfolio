@@ -780,14 +780,14 @@ footer {
     
     .about-content h3 {
         text-align: left !important;
-        font-size: 1.5rem !important;
+        font-size: 1.1rem !important;
         margin-bottom: 15px !important;
     }
     
     .about-content p {
         text-align: left !important;
-        font-size: 0.95rem !important;
-        line-height: 1.5 !important;
+        font-size: 0.85rem !important;
+        line-height: 1.4 !important;
         margin-bottom: 15px !important;
     }
     
@@ -798,12 +798,12 @@ footer {
     
     .education-details h4 {
         text-align: left !important;
-        font-size: 1.1rem !important;
+        font-size: 1rem !important;
     }
     
     .education-details p {
         text-align: left !important;
-        font-size: 0.9rem !important;
+        font-size: 0.8rem !important;
         margin-bottom: 8px !important;
     }
     
