@@ -765,12 +765,12 @@ footer {
 
     .about-grid {
         grid-template-columns: 1fr !important;
-        gap: 20px !important;
+        gap: 30px !important;
     }
     
     .about-grid img {
-        width: 250px !important;
-        height: 333px !important;
+        width: 280px !important;
+        height: 373px !important;
         margin: 0 auto;
         display: block;
     }
