@@ -1,8 +1,8 @@
 :root {
-    --primary: #c12525; /* Main color for important texts */
+    --primary: #c12525;
     --secondary: #1e293b;
-    --light: #f8fafc; /* Main color for Sub areas like about me */
-    --dark: #0f172a; /* Main color for Sub areas like about me */
+    --light: #f8fafc;
+    --dark: #0f172a;
     --accent: #a855f7; 
 }
 
