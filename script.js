@@ -221,11 +221,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Auto-play gallery carousel
-    setInterval(() => {
-        galleryCurrentSlide = (galleryCurrentSlide + 1) % galleryTotalSlides;
-        updateGalleryCarousel();
-    }, 5000); // Change slide every 5 seconds
+    // Auto-play gallery carousel removed - manual navigation only
     
     // Touch events for gallery carousel
     let galleryTouchStartX = 0;
