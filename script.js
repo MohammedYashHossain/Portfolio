@@ -45,3 +45,24 @@ const observer = new IntersectionObserver(
 );
 
 sections.forEach((section) => observer.observe(section));
+
+const gallerySlides = Array.from(document.querySelectorAll(".gallery-slide"));
+const galleryIndicators = Array.from(document.querySelectorAll(".gallery-indicator"));
+let galleryIndex = 0;
+
+function showGallerySlide(index) {
+    gallerySlides.forEach((slide, slideIndex) => {
+        slide.classList.toggle("active", slideIndex === index);
+    });
+
+    galleryIndicators.forEach((indicator, indicatorIndex) => {
+        indicator.classList.toggle("active", indicatorIndex === index);
+    });
+}
+
+if (gallerySlides.length > 1) {
+    window.setInterval(() => {
+        galleryIndex = (galleryIndex + 1) % gallerySlides.length;
+        showGallerySlide(galleryIndex);
+    }, 3000);
+}
