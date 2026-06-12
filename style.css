@@ -344,8 +344,7 @@ section {
 .section-intro p:last-child,
 .about-content p,
 .timeline-card p,
-.cert-card p,
-.education-card p {
+.cert-card p {
     color: var(--muted);
 }
 
@@ -520,8 +519,7 @@ section {
 
 .timeline-card,
 .skill-category,
-.cert-card,
-.education-card {
+.cert-card {
     border: 1px solid var(--line);
     border-radius: 12px;
     background: var(--surface);
@@ -558,34 +556,6 @@ section {
 .cert-card h3 {
     color: var(--ink);
     font-size: 1.05rem;
-}
-
-.education-card {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-    padding: 34px;
-}
-
-.education-card h2 {
-    font-size: clamp(1.8rem, 4vw, 3rem);
-    line-height: 1.05;
-}
-
-.education-meta {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    min-width: 220px;
-}
-
-.education-meta span {
-    padding: 10px 12px;
-    border-radius: 8px;
-    background: var(--surface-strong);
-    color: var(--ink);
-    font-weight: 800;
 }
 
 .gallery-grid {
@@ -658,7 +628,6 @@ footer {
     .about-grid,
     .project-card.featured,
     .timeline-item,
-    .education-card,
     .footer-content {
         grid-template-columns: 1fr;
     }
