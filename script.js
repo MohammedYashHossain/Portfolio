@@ -1,254 +1,47 @@
-// Particles.js Configuration
-particlesJS('particles-js', {
-    particles: {
-        number: {
-            value: 80,
-            density: {
-                enable: true,
-                value_area: 800
-            }
-        },
-        color: {
-            value: "#ffffff"
-        },
-        shape: {
-            type: "circle",
-            stroke: {
-                width: 0,
-                color: "#000000"
-            },
-        },
-        opacity: {
-            value: 0.5,
-            random: false,
-        },
-        size: {
-            value: 3,
-            random: true,
-        },
-        line_linked: {
-            enable: true,
-            distance: 150,
-            color: "#ffffff",
-            opacity: 0.4,
-            width: 1
-        },
-        move: {
-            enable: true,
-            speed: 2,
-            direction: "none",
-            random: false,
-            straight: false,
-            out_mode: "out",
-            bounce: false,
-        }
-    },
-    interactivity: {
-        detect_on: "canvas",
-        events: {
-            onhover: {
-                enable: true,
-                mode: "grab"
-            },
-            onclick: {
-                enable: true,
-                mode: "push"
-            },
-            resize: true
-        },
-        modes: {
-            grab: {
-                distance: 140,
-                line_linked: {
-                    opacity: 1
-                }
-            },
-            push: {
-                particles_nb: 4
-            },
-            remove: {
-                particles_nb: 2
-            }
-        }
-    },
-    retina_detect: true
-});
+const header = document.getElementById("header");
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.querySelector(".nav-menu");
+const navLinks = document.querySelectorAll(".nav-link");
 
-// Mobile menu toggle
-document.getElementById('hamburger').addEventListener('click', function() {
-    document.querySelector('.nav-menu').classList.toggle('active');
-});
-
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-        
-        // Close mobile menu after clicking a link
-        document.querySelector('.nav-menu').classList.remove('active');
-    });
-});
-
-// Header scroll effect
-window.addEventListener('scroll', function() {
-    const header = document.getElementById('header');
-    if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
-});
-
-// Carousel functionality
-const carousel = document.querySelector('.carousel-slides');
-const dots = document.querySelectorAll('.carousel-dot');
-const prevBtn = document.querySelector('.prev-btn');
-const nextBtn = document.querySelector('.next-btn');
-let currentSlide = 0;
-const slideWidth = document.querySelector('.project-card').offsetWidth;
-const totalSlides = document.querySelectorAll('.project-card').length;
-
-// Update dots to show all slides
-dots.forEach((dot, index) => {
-    dot.style.display = 'block';
-});
-
-function updateCarousel() {
-    carousel.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
-    dots.forEach((dot, index) => {
-        dot.classList.toggle('active', index === currentSlide);
-    });
+function updateHeader() {
+    header.classList.toggle("scrolled", window.scrollY > 24);
 }
 
-// Add click handlers for navigation buttons
-prevBtn.addEventListener('click', () => {
-    if (currentSlide > 0) {
-        currentSlide--;
-    } else {
-        currentSlide = totalSlides - 1; // Loop to last slide
-    }
-    updateCarousel();
+window.addEventListener("scroll", updateHeader);
+updateHeader();
+
+hamburger.addEventListener("click", () => {
+    const isOpen = navMenu.classList.toggle("active");
+    header.classList.toggle("menu-open", isOpen);
+    hamburger.setAttribute("aria-expanded", String(isOpen));
+    hamburger.innerHTML = isOpen ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
 });
 
-nextBtn.addEventListener('click', () => {
-    if (currentSlide < totalSlides - 1) {
-        currentSlide++;
-    } else {
-        currentSlide = 0; // Loop to first slide
-    }
-    updateCarousel();
-});
-
-dots.forEach((dot, index) => {
-    dot.addEventListener('click', () => {
-        currentSlide = index;
-        updateCarousel();
+navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+        navMenu.classList.remove("active");
+        header.classList.remove("menu-open");
+        hamburger.setAttribute("aria-expanded", "false");
+        hamburger.innerHTML = '<i class="fas fa-bars"></i>';
     });
 });
 
-// Touch events for mobile
-let touchStartX = 0;
-let touchEndX = 0;
+const sections = Array.from(document.querySelectorAll("main section[id]"));
 
-carousel.addEventListener('touchstart', (e) => {
-    touchStartX = e.touches[0].clientX;
-});
+const observer = new IntersectionObserver(
+    (entries) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
 
-carousel.addEventListener('touchend', (e) => {
-    touchEndX = e.changedTouches[0].clientX;
-    handleSwipe();
-});
-
-function handleSwipe() {
-    const swipeThreshold = 50;
-    const diff = touchStartX - touchEndX;
-
-    if (Math.abs(diff) > swipeThreshold) {
-        if (diff > 0) {
-            // Swipe left
-            currentSlide = (currentSlide + 1) % totalSlides;
-        } else {
-            // Swipe right
-            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-        }
-        updateCarousel();
-    }
-}
-
-// Gallery Carousel Functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const galleryCarousel = document.querySelector('.gallery-carousel-slides');
-    const galleryPrevBtn = document.querySelector('.gallery-prev-btn');
-    const galleryNextBtn = document.querySelector('.gallery-next-btn');
-    const galleryDots = document.querySelectorAll('.gallery-dot');
-    
-    if (!galleryCarousel) return;
-    
-    let galleryCurrentSlide = 0;
-    const galleryTotalSlides = galleryDots.length;
-    
-    function updateGalleryCarousel() {
-        const translateX = -galleryCurrentSlide * 100;
-        galleryCarousel.style.transform = `translateX(${translateX}%)`;
-        
-        // Update dots
-        galleryDots.forEach((dot, index) => {
-            dot.classList.toggle('active', index === galleryCurrentSlide);
+            navLinks.forEach((link) => {
+                link.classList.toggle("active", link.getAttribute("href") === `#${entry.target.id}`);
+            });
         });
+    },
+    {
+        rootMargin: "-35% 0px -55% 0px",
+        threshold: 0
     }
-    
-    // Previous button
-    galleryPrevBtn.addEventListener('click', () => {
-        galleryCurrentSlide = (galleryCurrentSlide - 1 + galleryTotalSlides) % galleryTotalSlides;
-        updateGalleryCarousel();
-    });
-    
-    // Next button
-    galleryNextBtn.addEventListener('click', () => {
-        galleryCurrentSlide = (galleryCurrentSlide + 1) % galleryTotalSlides;
-        updateGalleryCarousel();
-    });
-    
-    // Dot navigation
-    galleryDots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-            galleryCurrentSlide = index;
-            updateGalleryCarousel();
-        });
-    });
-    
-    // Auto-play gallery carousel removed - manual navigation only
-    
-    // Touch events for gallery carousel
-    let galleryTouchStartX = 0;
-    let galleryTouchEndX = 0;
-    
-    galleryCarousel.addEventListener('touchstart', (e) => {
-        galleryTouchStartX = e.touches[0].clientX;
-    });
-    
-    galleryCarousel.addEventListener('touchend', (e) => {
-        galleryTouchEndX = e.changedTouches[0].clientX;
-        handleGallerySwipe();
-    });
-    
-    function handleGallerySwipe() {
-        const swipeThreshold = 50;
-        const diff = galleryTouchStartX - galleryTouchEndX;
-        
-        if (Math.abs(diff) > swipeThreshold) {
-            if (diff > 0) {
-                // Swipe left
-                galleryCurrentSlide = (galleryCurrentSlide + 1) % galleryTotalSlides;
-            } else {
-                // Swipe right
-                galleryCurrentSlide = (galleryCurrentSlide - 1 + galleryTotalSlides) % galleryTotalSlides;
-            }
-            updateGalleryCarousel();
-        }
-    }
-});
+);
+
+sections.forEach((section) => observer.observe(section));

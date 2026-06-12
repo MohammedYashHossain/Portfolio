@@ -2,649 +2,490 @@
 <html lang="en">
 <head>
     <!-- Created By: Mohammed Yash Hossain -->
-    <!-- Started Project: 2/16/25 -->
+    <!-- Portfolio refreshed for AI research, software engineering, and ML recruiting -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohammed Hossain | CS & Economics Student</title>
+    <meta name="description" content="Mohammed Yash Hossain is a Rutgers Computer Science and Economics student focused on AI research, machine learning, robotics, and full-stack software engineering.">
+    <title>Mohammed Yash Hossain | AI Research & Software Engineering</title>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
-    <!-- Header -->
     <header id="header">
         <div class="container header-container">
-            <a href="#" class="logo">MYH</a>
-            <nav>
+            <a href="#home" class="logo">MYH</a>
+            <nav aria-label="Primary navigation">
                 <ul class="nav-menu">
                     <li><a href="#about" class="nav-link">About</a></li>
                     <li><a href="#projects" class="nav-link">Projects</a></li>
                     <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
                     <li><a href="#gallery" class="nav-link">Gallery</a></li>
                 </ul>
-                <button class="hamburger" id="hamburger">
+                <button class="hamburger" id="hamburger" type="button" aria-label="Open navigation menu" aria-expanded="false">
                     <i class="fas fa-bars"></i>
                 </button>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div id="particles-js"></div>
-        <div class="container hero-content">
-            <h1>Hi, I'm <span>Mohammed Y. Hossain</span></h1>
-            <p class="hero-subtitle">Software Engineer</p>
-            <p class="hero-description">A Computer Science & Economics double major at Rutgers University with a passion for software engineering and machine learning. Building intelligent solutions and scalable applications.</p>
-            <div class="contact-info" style="margin-bottom: 30px; color: #021025;">
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-bg"></div>
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow">Rutgers CS + Economics - AI, ML, and Software Engineering</p>
+                    <h1>Building intelligent systems from research prototype to shipped product.</h1>
+                    <p class="hero-description">
+                        I am Mohammed "Yash" Hossain, a Rutgers University student focused on AI research,
+                        machine learning, robotics, and full-stack engineering. I turn messy datasets,
+                        real-time sensor streams, and product ideas into useful software.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn">See Featured Work</a>
+                        <a href="mailto:mohossain.swe@gmail.com" class="btn btn-outline">Contact Me</a>
+                    </div>
+                    <div class="social-links" aria-label="Social links">
+                        <a href="https://www.linkedin.com/in/mohammedyhossain/" target="_blank" rel="noreferrer" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/MohammedYashHossain" target="_blank" rel="noreferrer" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://mohammedyhossainresume.tiiny.site" target="_blank" rel="noreferrer" class="social-link" aria-label="Resume">
+                            <i class="fas fa-file-alt"></i>
+                        </a>
+                        <a href="mailto:mohossain.swe@gmail.com" class="social-link" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <aside class="hero-card" aria-label="Profile summary">
+                    <img src="Professional Headshot.jpg" alt="Mohammed Yash Hossain" class="hero-headshot">
+                    <div>
+                        <p class="hero-card-kicker">Open to</p>
+                        <h2>AI Research, SWE, and ML Engineering roles</h2>
+                    </div>
+                    <div class="quick-facts">
+                        <div>
+                            <span>3.75 GPA</span>
+                            <p>Rutgers University</p>
+                        </div>
+                        <div>
+                            <span>100K+ rows</span>
+                            <p>Sensor data analyzed</p>
+                        </div>
+                        <div>
+                            <span>50% lower</span>
+                            <p>Inference latency and task error</p>
+                        </div>
+                    </div>
+                </aside>
             </div>
-            <div class="btn-container">
-                <a href="#projects" class="btn">View My Projects</a>
-                <a href="#about" class="btn btn-outline">Learn More About Me</a>
-            </div>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/mohammedyhossain/" target="_blank" class="social-link">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://github.com/MohammedYashHossain" target="_blank" class="social-link">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://mohammedyhossainresume.tiiny.site" target="_blank" class="social-link">
-                    <i class="fas fa-file-alt"></i>
-                </a>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-grid">
-                <img src="Professional Headshot.jpg" alt="Mohammed Hossain" class="about-img">
+        <section class="impact-strip" aria-label="Career highlights">
+            <div class="container impact-grid">
+                <div class="impact-item">
+                    <strong>AI Research Intern</strong>
+                    <span>Aerospace and aviation research at Diakon Solutions</span>
+                </div>
+                <div class="impact-item">
+                    <strong>CS3 Accelerator Winner</strong>
+                    <span>AeroBin accepted into the NEC X startup accelerator</span>
+                </div>
+                <div class="impact-item">
+                    <strong>Robotics + ML</strong>
+                    <span>PyTorch, ROS, computer vision, and live sensor streams</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container about-grid">
+                <div class="about-media">
+                    <img src="Launch Circuit.webp" alt="Mohammed at Launch Circuit" class="about-img">
+                </div>
                 <div class="about-content">
-                    <h3>Software Engineer & ML Enthusiast</h3>
-                    <p>I'm a Computer Science & Economics double major at Rutgers University with a strong focus on software engineering and machine learning. My technical expertise spans full-stack development, AI/ML implementation, and data-driven solutions.</p>
-                    
-                    <p>I'm actively seeking opportunities to apply my technical skills in software engineering and machine learning roles, where I can contribute to innovative solutions and continue growing as a developer.</p>
-                    
-                    <p>When I'm not programming, I am making content for my YouTube channel, playing volleyball, making TikTok content, or working on Holiday Handouts, a charity organization I co-founded with my roommates to support the Newark community.</p>
-                    
-                    <div class="additional-links">
-                        <a href="https://www.youtube.com/@mowhossain" target="_blank" class="social-btn">
-                            <i class="fab fa-youtube"></i>
+                    <p class="eyebrow">About</p>
+                    <h2 class="section-heading">Computer science, economics, and practical AI systems.</h2>
+                    <p>
+                        I study Computer Science and Economics at Rutgers University, where my work sits at the
+                        intersection of machine learning, data-driven decision systems, and production-ready web
+                        applications. My strongest projects combine model development with the engineering needed
+                        to make results usable.
+                    </p>
+                    <p>
+                        Recent work includes AI research for aerospace initiatives, a computer-vision control
+                        pipeline for robotic teleoperation, and full-stack systems for startup teams. I care about
+                        measurable outcomes, clean interfaces, and learning fast enough to be useful in ambiguous
+                        technical environments.
+                    </p>
+                    <div class="about-links">
+                        <a href="https://www.youtube.com/@mowhossain" target="_blank" rel="noreferrer" class="pill-link">
+                            <i class="fab fa-youtube"></i> YouTube
                         </a>
-                        <a href="http://www.holidayhandouts.com" target="_blank" class="social-btn">
-                            🎁
+                        <a href="http://www.holidayhandouts.com" target="_blank" rel="noreferrer" class="pill-link">
+                            <i class="fas fa-hands-helping"></i> Holiday Handouts
                         </a>
-                        <a href="https://www.tiktok.com/@volley.hossain" target="_blank" class="social-btn">
-                            <i class="fab fa-tiktok"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Skills Section -->
-            <div class="skills-section">
-                <h2 class="section-title">My Skills</h2>
-                
-                <div class="skills-grid">
-                    <!-- Programming Languages -->
-                    <div class="skill-category">
-                        <h3>Programming Languages</h3>
-                        <div class="skills-container">
-                            <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"></span>
-                            <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"></span>
-                            <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"></span>
-                            <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++"></span>
-                            <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C"></span>
-                            <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#"></span>
-                            <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL"></span>
-                            <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"></span>
-                            <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"></span>
-                            <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart"></span>
-                            <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg" alt="Swift"></span>
-                        </div>
-                    </div>
-
-                    <!-- Frontend Development -->
-                    <div class="skill-category">
-                        <h3>Frontend Development</h3>
-                        <div class="skills-container">
-                            <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React.js"></span>
-                            <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js"></span>
-                            <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular"></span>
-                            <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap"></span>
-                            <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter"></span>
-                            <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind"></span>
-                        </div>
-                    </div>
-            
-                    <!-- Backend Development -->
-                    <div class="skill-category">
-                        <h3>Backend Development</h3>
-                        <div class="skills-container">
-                            <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"></span>
-                            <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js"></span>
-                        </div>
-                    </div>
-            
-                    <!-- Databases -->
-                    <div class="skill-category">
-                        <h3>Databases</h3>
-                        <div class="skills-container">
-                            <span class="skill-badge">MySQL</span>
-                        </div>
-                    </div>
-            
-                    <!-- Developer Tools -->
-                    <div class="skill-category">
-                        <h3>Developer Tools</h3>
-                        <div class="skills-container">
-                            <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"></span>
-                            <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"></span>
-                            <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code"></span>
-                        </div>
-                    </div>
-            
-                    <!-- Additional Tools -->
-                    <div class="skill-category">
-                        <h3>Additional Tools</h3>
-                        <div class="skills-container">
-                            <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="AWS"></span>
-                            <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" alt="Photoshop"></span>
-                            <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma"></span>
-                            <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" alt="Jira"></span>
-                        </div>
-                    </div>
-
-                    <!-- Hardware & Robotics -->
-                    <div class="skill-category">
-                        <h3>Hardware & Robotics</h3>
-                        <div class="skills-container">
-                            <span class="skill-badge">Arduino</span>
-                            <span class="skill-badge">Bambu Studio</span>
-                            <span class="skill-badge">3D Printing</span>
-                            <span class="skill-badge">Robotics</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-        <div class="container">
-            <h2 class="section-title">My Projects</h2>
-            <div class="carousel-container">
-                <div class="carousel-wrapper">
-                    <div class="carousel-slides">
-                        <!-- Aerobin Project -->
-                        <div class="project-card">
-                            <img src="Launch Circuit.webp" alt="Aerobin" class="project-img">
-                            <div class="project-content">
-                                <h3 class="project-title">Aerobin (Winner – Columbia University CS3 Accelerator; accepted into NEC X startup accelerator)</h3>
-                                <p class="project-desc">Designed a backend workflow to process real-time bin sensor updates and trigger collection events. Implemented routing logic to prioritize pickup locations based on fill-level data and operational constraints. Built data handling components to store and retrieve bin status information for monitoring and decision-making. Collaborated on integrating the system with a web interface for live tracking and operational visibility.</p>
-                                <div class="project-tags">
-                                    <span class="project-tag">Backend</span>
-                                    <span class="project-tag">Real-time Data</span>
-                                    <span class="project-tag">Routing</span>
-                                    <span class="project-tag">Sensors</span>
-                                    <span class="project-tag">Web Interface</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- LeRobot Project -->
-                        <div class="project-card">
-                            <img src="Ideal project Showcase.jpg" alt="LeRobot Project" class="project-img">
-                            <div class="project-content">
-                                <h3 class="project-title">LeRobot - Robotic Arm with Machine Learning</h3>
-                                <p class="project-desc">Developed a dual robotic arm system with teleoperation capabilities and machine learning integration. Built using Python with LeRobot framework, featuring real-time teleoperation at 58-59 Hz, motor calibration systems, and automated task performance. Implemented leader-follower arm architecture with SO-101 robot arms and Feetech motors, achieving stable USB serial communication and precise motor control. Created comprehensive calibration and setup systems for reliable robotic automation.</p>
-                                <div class="project-tags">
-                                    <span class="project-tag">Python</span>
-                                    <span class="project-tag">LeRobot</span>
-                                    <span class="project-tag">Machine Learning</span>
-                                    <span class="project-tag">Robotics</span>
-                                    <span class="project-tag">Teleoperation</span>
-                                    <span class="project-tag">Motor Control</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="https://www.youtube.com/watch?v=7A7y5L1N3mA" target="_blank" class="project-link">
-                                        <i class="fab fa-youtube"></i> Demo Video
-                                    </a>
-                                    <a href="https://github.com/MohammedYashHossain/LeRobot" target="_blank" class="project-link">
-                                        <i class="fab fa-github"></i> Source Code
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Ace It - Student Assistant -->
-                        <div class="project-card">
-                            <img src="ACE IT.webp" alt="Ace It Student Assistant" class="project-img">
-                            <div class="project-content">
-                                <h3 class="project-title">Ace It - Student Assistant Web App (HackRU Fall 25)</h3>
-                                <p class="project-desc">A comprehensive student assistant platform built for HackRU 2025 to help students manage academics, track mental well-being, and access essential resources. Features academic management with class schedule tracking, homework assignments, and study progress analytics. Includes wellness support with daily mood tracking, mental health resources, and goal-setting tools. Built with React 18, TypeScript, and Tailwind CSS, featuring AI-powered academic assistance and data visualization dashboard.</p>
-                                <div class="project-tags">
-                                    <span class="project-tag">React</span>
-                                    <span class="project-tag">TypeScript</span>
-                                    <span class="project-tag">Tailwind CSS</span>
-                                    <span class="project-tag">Chart.js</span>
-                                    <span class="project-tag">Vercel</span>
-                                    <span class="project-tag">Hackathon</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="https://hack-ru-25.vercel.app/" target="_blank" class="project-link">
-                                        <i class="fas fa-external-link-alt"></i> Live Demo
-                                    </a>
-                                    <a href="https://github.com/MohammedYashHossain/HackRU25" target="_blank" class="project-link">
-                                        <i class="fab fa-github"></i> Source Code
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Pharmacy Inventory Optimization -->
-                        <div class="project-card">
-                            <img src="DatathonBits2025.png" alt="Pharmacy Inventory Optimization" class="project-img">
-                            <div class="project-content">
-                                <h3 class="project-title">Pharmacy Inventory Optimization (BITS Datathon 2025)</h3>
-                                <p class="project-desc">Built a dashboard using Streamlit to visualize pharmaceutical inventory trends and optimize stock management. Implemented ARIMA time series forecasting to predict demand fluctuations and mitigate stockout/overstocking risks. Processed & cleaned 600,000+ rows of pharmaceutical sales data using Pandas and NumPy, improving data integrity.</p>
-                                <div class="project-tags">
-                                    <span class="project-tag">Python</span>
-                                    <span class="project-tag">Streamlit</span>
-                                    <span class="project-tag">Pandas</span>
-                                    <span class="project-tag">NumPy</span>
-                                    <span class="project-tag">Matplotlib</span>
-                                    <span class="project-tag">ARIMA</span>
-                                    <span class="project-tag">Hackathon</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="https://github.com/sameerj05/datathon2025" target="_blank" class="project-link">
-                                        <i class="fab fa-github"></i> Source Code
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Kaiju Tower Defense -->
-                        <div class="project-card">
-                            <img src="KTD_Logo.png" alt="Kaiju Tower Defense" class="project-img">
-                            <div class="project-content">
-                                <h3 class="project-title">Kaiju Tower Defense</h3>
-                                <p class="project-desc">Developed a modular 2D retro tower defense game in Python using Pygame, inspired by the Godzilla franchise. Built an object-oriented game engine with custom classes for towers, enemies, projectiles, UI, and game logic. Implemented game loop architecture, event-driven programming, and state machines for responsive gameplay. Delivered a complete user experience with effects and animations, increasing engagement and playability by 40%.</p>
-                                <div class="project-tags">
-                                    <span class="project-tag">Python</span>
-                                    <span class="project-tag">Pygame</span>
-                                    <span class="project-tag">OOP</span>
-                                    <span class="project-tag">Game Development</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="https://www.youtube.com/watch?v=9mBLxX1bnVk" target="_blank" class="project-link">
-                                        <i class="fab fa-youtube"></i> Demo Video
-                                    </a>
-                                    <a href="https://github.com/MohammedYashHossain/KTD" target="_blank" class="project-link">
-                                        <i class="fab fa-github"></i> Source Code
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- CareerCoach AI -->
-                        <div class="project-card">
-                            <img src="Career Coach Ai Logo.png" alt="CareerCoach Ai" class="project-img">
-                            <div class="project-content">
-                                <h3 class="project-title">CareerCoach Ai</h3>
-                                <p class="project-desc">Programmed a full-stack web app that generates tailored career advice based on user inputs for their career. Engineering an AI-powered backend using Node.js and OpenAI to generate real-time personalized feedback. Designed a custom UI/UX experience to support multiple career tracks using modular design and dynamic form logic.</p>
-                                <div class="project-tags">
-                                    <span class="project-tag">OpenAi</span>
-                                    <span class="project-tag">Node.js</span>
-                                    <span class="project-tag">JavaScript</span>
-                                    <span class="project-tag">HTML</span>
-                                    <span class="project-tag">CSS</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="https://mohammedyashhossain.github.io/Career-Coach-Ai/" target="_blank" class="project-link">
-                                        <i class="fas fa-external-link-alt"></i> Live Demo
-                                    </a>
-                                    <a href="https://github.com/MohammedYashHossain/Career-Coach-Ai" target="_blank" class="project-link">
-                                        <i class="fab fa-github"></i> Source Code
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Hairalyze Website -->
-                        <div class="project-card">
-                            <img src="hairalyze.png" alt="Hairalyze Website" class="project-img">
-                            <div class="project-content">
-                                <h3 class="project-title">Hairalyze Website</h3>
-                                <p class="project-desc">Developed a fully functional modern website showcasing web development skills. Implemented responsive design, interactive features, and optimized performance using Next.js and Tailwind CSS.</p>
-                                <div class="project-tags">
-                                    <span class="project-tag">Next.js</span>
-                                    <span class="project-tag">Tailwind CSS</span>
-                                    <span class="project-tag">JavaScript</span>
-                                    <span class="project-tag">HTML/CSS</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="https://www.hairalyze.com" target="_blank" class="project-link">
-                                        <i class="fas fa-external-link-alt"></i> Live Demo
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- SMNCutz Barber Website -->
-                        <div class="project-card">
-                            <img src="SMNCutz.jpg" alt="SMNCutz Barber Website" class="project-img">
-                            <div class="project-content">
-                                <h3 class="project-title">SMNCutz Barber Website</h3>
-                                <p class="project-desc">Developed a responsive, modern web application using HTML5, CSS3, and JavaScript with TailwindCSS framework, implementing smooth animations and mobile-first design principles to enhance user experience. Integrated EmailJS API for seamless appointment booking functionality and implemented form validation, ensuring reliable customer communication and business automation. Designed and deployed a professional portfolio showcasing custom image galleries, pricing structures, and client testimonials, demonstrating full-stack development capabilities and attention to user interface design.</p>
-                                <div class="project-tags">
-                                    <span class="project-tag">HTML5</span>
-                                    <span class="project-tag">CSS3</span>
-                                    <span class="project-tag">JavaScript</span>
-                                    <span class="project-tag">TailwindCSS</span>
-                                    <span class="project-tag">EmailJS</span>
-                                    <span class="project-tag">Responsive Design</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="https://smncutz.vercel.app/" target="_blank" class="project-link">
-                                        <i class="fas fa-external-link-alt"></i> Live Demo
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Pickle.io -->
-                        <div class="project-card">
-                            <img src="Pickle.jpg" alt="Pickle.io" class="project-img">
-                            <div class="project-content">
-                                <h3 class="project-title">Pickle.io</h3>
-                                <p class="project-desc">An interactive pickleball game built with vanilla JavaScript and the Canvas API, implementing real-time gameplay mechanics.</p>
-                                <div class="project-tags">
-                                    <span class="project-tag">HTML</span>
-                                    <span class="project-tag">CSS</span>
-                                    <span class="project-tag">JavaScript</span>
-                                    <span class="project-tag">Canvas API</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="https://github.com/MohammedYashHossain/PickleBall" target="_blank" class="project-link">
-                                        <i class="fab fa-github"></i> Source Code
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="project-card">
-                            <img src="Python.png" alt="Decimal & Binary Converter" class="project-img">
-                            <div class="project-content">
-                                <h3 class="project-title">Decimal & Binary Converter</h3>
-                                <p class="project-desc">A Python program that converts binary numbers to decimal representation and vice versa, using manual conversion techniques and binary arithmetic.</p>
-                                <div class="project-tags">
-                                    <span class="project-tag">Python</span>
-                                    <span class="project-tag">String Manipulation</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="https://github.com/MohammedYashHossain/Binary-and-Number-Converter" target="_blank" class="project-link">
-                                        <i class="fab fa-github"></i> Source Code
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="project-card">
-                            <img src="Serve.png" alt="Volleyball Serve Simulator" class="project-img">
-                            <div class="project-content">
-                                <h3 class="project-title">Volleyball Serve Simulator</h3>
-                                <p class="project-desc">An application for volleyball players that indicates the likelihood of achieving a service ace based on various factors and conditions.</p>
-                                <div class="project-tags">
-                                    <span class="project-tag">JavaScript</span>
-                                    <span class="project-tag">HTML</span>
-                                    <span class="project-tag">CSS</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="https://studio.code.org/projects/applab/OUqY9lv3vT40FuZETAKziMDTjG7qHgc7Q8diSbfDuAA" target="_blank" class="project-link">
-                                        <i class="fas fa-external-link-alt"></i> Live Demo
-                                    </a>
-                                    <a href="https://github.com/MohammedYashHossain/Volleyball-Serve-Simulator" target="_blank" class="project-link">
-                                        <i class="fab fa-github"></i> Source Code
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Carousel Navigation -->
-                <div class="carousel-nav">
-                    <button class="carousel-btn prev-btn">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                    <div class="carousel-dots">
-                        <span class="dot active" data-index="0"></span>
-                        <span class="dot" data-index="1"></span>
-                        <span class="dot" data-index="2"></span>
-                        <span class="dot" data-index="3"></span>
-                        <span class="dot" data-index="4"></span>
-                        <span class="dot" data-index="5"></span>
-                        <span class="dot" data-index="6"></span>
-                        <span class="dot" data-index="7"></span>
-                        <span class="dot" data-index="8"></span>
-                        <span class="dot" data-index="9"></span>
-                        <span class="dot" data-index="10"></span>
-                    </div>
-                    <button class="carousel-btn next-btn">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Certifications Section -->
-    <section id="certifications" style="background-color: #f1f5f9;">
-        <div class="container">
-            <h2 class="section-title">Certifications</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px;">
-                <div style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-                    <h3 style="color: var(--primary); margin-bottom: 10px;">AWS Certified: Cloud Practitioner</h3>
-                    <p style="color: #64748b; font-style: italic;">In Progress</p>
-                </div>
-                <div style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-                    <h3 style="color: var(--primary); margin-bottom: 10px;">LinkedIn Learning: Artificial Intelligence Foundations: Machine Learning</h3>
-                    <p style="color: #64748b;">March 2025</p>
-                    <div style="margin-top: 15px;">
-                        <a href="https://www.linkedin.com/learning/certificates/572516143e4d2f04286e81b4430ec38c854efc59b354b71ca03ba30121f0bb45?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BEhjv3E2yQTi5Dggdk0eDXw%3D%3D&accountId=76115650&u=76115650&success=true&authUUID=hwtBmghuTLSnLOR4V9SD9Q%3D%3D" target="_blank" class="project-link">
-                            <i class="fas fa-certificate"></i> View Certification
-                        </a>
-                    </div>
-                </div>
-                <div style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-                    <h3 style="color: var(--primary); margin-bottom: 10px;">LinkedIn Learning: Learning Git and GitHub</h3>
-                    <p style="color: #64748b;">March 2025</p>
-                    <div style="margin-top: 15px;">
-                        <a href="https://www.linkedin.com/learning/certificates/2c4241bc20080fade9020c3104686fae919096a2f4234d45930544e0d284eca1?u=76115650" target="_blank" class="project-link">
-                            <i class="fas fa-certificate"></i> View Certification
+                        <a href="https://www.tiktok.com/@volley.hossain" target="_blank" rel="noreferrer" class="pill-link">
+                            <i class="fab fa-tiktok"></i> TikTok
                         </a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Experience Section -->
-    <section id="experience">
-        <div class="container">
-            <h2 class="section-title">Experience</h2>
-            <div class="experience-timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-date">Sept 2024 – March 2025</div>
-                        <h3 class="timeline-title">Technical Specialist</h3>
-                        <div class="timeline-company">Launch Circuit Labs (Rutgers University) | New Brunswick, New Jersey</div>
-                        <p class="timeline-desc">Built and deployed full-stack web applications (React, Node.js, REST APIs, SQL databases) for early-stage startup teams, implementing authentication, data storage, and backend endpoints. Selected to participate in Columbia University's CS3 Accelerator, where projects were evaluated by industry mentors and accepted into the NEC X startup accelerator program. Built core components of AeroBin, an AI-driven waste-management system using real-time sensor data and routing logic to optimize collection operations.</p>
-                    </div>
-                    <div class="timeline-dot"></div>
+        <section id="projects" class="section-muted">
+            <div class="container">
+                <div class="section-intro">
+                    <p class="eyebrow">Featured Projects</p>
+                    <h2 class="section-heading">Projects that show AI depth and product judgment.</h2>
+                    <p>Selected work across research prototypes, ML systems, full-stack applications, and data products.</p>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-date">June 2025 - Aug 2025</div>
-                        <h3 class="timeline-title">Machine Learning Engineering Intern</h3>
-                        <div class="timeline-company">Ideal Institute of Technology | Pleasantville, New Jersey</div>
-                        <p class="timeline-desc">Engineered and deployed end-to-end ML models using Python and TensorFlow, improving prediction accuracy by 40%. Created and assembled a robotic arm utilizing machine learning to automate it to perform specific tasks. Developed the Machine Learning course curriculum for students at the institute. Processed and analyzed 100K+ rows of structured and unstructured business-critical data using PySpark and SQL. Collaborated with data scientists and engineers to build scalable ML pipelines and optimize hyperparameters.</p>
-                    </div>
-                    <div class="timeline-dot"></div>
+                <div class="projects-grid">
+                    <article class="project-card featured">
+                        <img src="Launch Circuit.webp" alt="AeroBin project team and accelerator work" class="project-img">
+                        <div class="project-content">
+                            <p class="project-type">Startup + IoT + Backend</p>
+                            <h3>AeroBin</h3>
+                            <p>
+                                Winner at Columbia University's CS3 Accelerator and accepted into the NEC X startup accelerator.
+                                Built backend workflows that ingest real-time bin sensor updates, trigger collection events,
+                                and prioritize pickup routes using fill-level data and operational constraints.
+                            </p>
+                            <div class="project-tags">
+                                <span>React</span><span>Node.js</span><span>SQL</span><span>IoT</span><span>REST APIs</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card featured">
+                        <img src="Ideal project Showcase.jpg" alt="LeRobot dual-arm robotics project" class="project-img">
+                        <div class="project-content">
+                            <p class="project-type">Robotics + ML</p>
+                            <h3>LeRobot Robotic Arm Teleoperation</h3>
+                            <p>
+                                Developed a real-time computer vision inference pipeline with PyTorch to assist object
+                                manipulation during dual-arm teleoperation. Integrated live sensor streams with ROS-based
+                                control logic for low-latency, semi-autonomous robotic movement.
+                            </p>
+                            <div class="project-tags">
+                                <span>Python</span><span>PyTorch</span><span>ROS</span><span>Computer Vision</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.youtube.com/watch?v=7A7y5L1N3mA" target="_blank" rel="noreferrer">
+                                    <i class="fab fa-youtube"></i> Demo
+                                </a>
+                                <a href="https://github.com/MohammedYashHossain/LeRobot" target="_blank" rel="noreferrer">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <img src="ACE IT.webp" alt="Ace It student assistant app" class="project-img">
+                        <div class="project-content">
+                            <p class="project-type">Hackathon Product</p>
+                            <h3>Ace It - Student Assistant</h3>
+                            <p>
+                                Built a React and TypeScript student assistant for HackRU with class scheduling,
+                                homework tracking, wellness check-ins, goal setting, analytics, and AI-powered
+                                academic support.
+                            </p>
+                            <div class="project-tags">
+                                <span>React</span><span>TypeScript</span><span>Tailwind</span><span>Chart.js</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://hack-ru-25.vercel.app/" target="_blank" rel="noreferrer">
+                                    <i class="fas fa-external-link-alt"></i> Live
+                                </a>
+                                <a href="https://github.com/MohammedYashHossain/HackRU25" target="_blank" rel="noreferrer">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <img src="DatathonBits2025.png" alt="Pharmacy inventory optimization dashboard" class="project-img">
+                        <div class="project-content">
+                            <p class="project-type">Forecasting + Analytics</p>
+                            <h3>Pharmacy Inventory Optimization</h3>
+                            <p>
+                                Built a Streamlit dashboard for pharmaceutical inventory trends and ARIMA demand
+                                forecasting. Cleaned and analyzed 600,000+ sales records to reduce stockout and
+                                overstocking risk.
+                            </p>
+                            <div class="project-tags">
+                                <span>Python</span><span>Streamlit</span><span>Pandas</span><span>ARIMA</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/sameerj05/datathon2025" target="_blank" rel="noreferrer">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <img src="Career Coach Ai Logo.png" alt="CareerCoach AI logo" class="project-img">
+                        <div class="project-content">
+                            <p class="project-type">AI Web App</p>
+                            <h3>CareerCoach AI</h3>
+                            <p>
+                                Programmed a full-stack app that generates career advice from user inputs using
+                                a Node.js backend and OpenAI-powered feedback, with modular forms for multiple
+                                career tracks.
+                            </p>
+                            <div class="project-tags">
+                                <span>OpenAI</span><span>Node.js</span><span>JavaScript</span><span>UI/UX</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://mohammedyashhossain.github.io/CareerCoach-Ai/" target="_blank" rel="noreferrer">
+                                    <i class="fas fa-external-link-alt"></i> Live
+                                </a>
+                                <a href="https://github.com/MohammedYashHossain/CareerCoach-Ai" target="_blank" rel="noreferrer">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <img src="hairalyze.png" alt="Hairalyze website" class="project-img">
+                        <div class="project-content">
+                            <p class="project-type">Mobile + Product</p>
+                            <h3>Hairalyze</h3>
+                            <p>
+                                Contributed Flutter MVP components and OpenAI API integration for personalized hair
+                                analysis, helping support the app's launch while improving app functionality and
+                                device performance.
+                            </p>
+                            <div class="project-tags">
+                                <span>Flutter</span><span>Dart</span><span>OpenAI API</span><span>Mobile</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.hairalyze.com/" target="_blank" rel="noreferrer">
+                                    <i class="fas fa-external-link-alt"></i> Site
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <div class="container">
+                <div class="section-intro">
+                    <p class="eyebrow">Experience</p>
+                    <h2 class="section-heading">Research, engineering, and leadership experience.</h2>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-content">
+                <div class="timeline">
+                    <article class="timeline-item">
+                        <div class="timeline-date">Jun 2026 - Aug 2026</div>
+                        <div class="timeline-card">
+                            <h3>Artificial Intelligence Intern</h3>
+                            <p class="timeline-company">Diakon Solutions LLC - Egg Harbor, New Jersey</p>
+                            <p>
+                                Conducting AI research and technical analysis for aerospace and aviation initiatives
+                                in partnership with the National Aerospace Research and Technology Park. Building and
+                                benchmarking ML models on aerospace datasets for predictive decision-making pipelines.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-date">Sept 2025 - Mar 2026</div>
+                        <div class="timeline-card">
+                            <h3>Technical Specialist</h3>
+                            <p class="timeline-company">Launch Circuit Labs - Rutgers University</p>
+                            <p>
+                                Engineered full-stack applications for early-stage startup teams using React, Node.js,
+                                REST APIs, and SQL. Architected core AeroBin backend modules integrating real-time IoT
+                                sensor data with intelligent routing logic.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-date">Jun 2025 - Aug 2025</div>
+                        <div class="timeline-card">
+                            <h3>Machine Learning Engineering Intern</h3>
+                            <p class="timeline-company">Ideal Institute of Technology - Center of AI & Robotics</p>
+                            <p>
+                                Developed a PyTorch computer-vision control pipeline for teleoperated manipulation,
+                                processed 100K+ rows of sensor data with PySpark and SQL, and reduced model inference
+                                latency and task error rate by about 50%.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
                         <div class="timeline-date">May 2025 - Present</div>
-                        <h3 class="timeline-title">Mobile App Development Intern</h3>
-                        <div class="timeline-company">Hairalyze | Remote</div>
-                        <p class="timeline-desc">Engineered core Flutter components for the app's MVP and played a key role in its successful App Store launch by integrating OpenAI's API to deliver personalized hair analysis, enhancing app functionality by 30%. Additionally, optimized performance across devices by debugging Dart code, reducing load times, and refining state management for a smoother user experience.</p>
-                    </div>
-                    <div class="timeline-dot"></div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
+                        <div class="timeline-card">
+                            <h3>Mobile App Development Intern</h3>
+                            <p class="timeline-company">Hairalyze - Remote</p>
+                            <p>
+                                Engineered Flutter MVP components and integrated OpenAI API-powered personalized hair
+                                analysis. Improved performance across devices by debugging Dart code and refining state
+                                management.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
                         <div class="timeline-date">Nov 2024 - Present</div>
-                        <h3 class="timeline-title">Founder & Head of Tech & Marketing</h3>
-                        <div class="timeline-company">Holiday Handouts | Newark, New Jersey</div>
-                        <p class="timeline-desc">Developed and managed the organization's website to attract donors and improve communication; oversaw the charity's Instagram account, generating 10,000+ impressions through consistent, engaging content; and planned fundraising events and outreach efforts to support the Newark community.</p>
-                    </div>
-                    <div class="timeline-dot"></div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-date">Sept 2024 - Apr 2025</div>
-                        <h3 class="timeline-title">Software Engineer Intern</h3>
-                        <div class="timeline-company">Reclip | Los Angeles, California (Remote)</div>
-                        <p class="timeline-desc">Created a Python automation script to generate and schedule social media posts, reducing manual effort by 35%; supported data-driven content strategies through research on consumer behavior and market trends; and contributed to over 100,000 combined views and impressions through strategic digital marketing.</p>
-                    </div>
-                    <div class="timeline-dot"></div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-date">Jul 2024 - Sept 2024</div>
-                        <h3 class="timeline-title">Software Engineer Fellow</h3>
-                        <div class="timeline-company">Headstarter Ai | New York, New York (Remote)</div>
-                        <p class="timeline-desc">Collaborated with a software engineering team to develop five AI programs using Python, Next.js, and OpenAI, while receiving mentorship and networking with engineers from Amazon, Capital One, and Bloomberg.</p>
-                    </div>
-                    <div class="timeline-dot"></div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-date">Sept 2022 - Present</div>
-                        <h3 class="timeline-title">Front-End Developer and Youth Club Team Lead</h3>
-                        <div class="timeline-company">Narsingdi-Bhairab Association of New Jersey | Atlantic City, New Jersey</div>
-                        <p class="timeline-desc">Designed and built a fully responsive website using HTML, CSS, and JavaScript, enhancing accessibility and user engagement; also led introductory coding workshops on Scratch and HTML, educating 20+ students on programming fundamentals.</p>
-                    </div>
-                    <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <h3>Founder, Head of Tech & Marketing</h3>
+                            <p class="timeline-company">Holiday Handouts - Newark, New Jersey</p>
+                            <p>
+                                Built and managed the organization's website, led digital outreach, and helped generate
+                                10,000+ impressions through community-focused content and fundraising campaigns.
+                            </p>
+                        </div>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Photo Gallery Section -->
-    <section id="gallery" style="background-color: #f8fafc;">
-        <div class="container">
-            <h2 class="section-title">Gallery</h2>
-            <div class="gallery-carousel-container">
-                <div class="gallery-carousel-wrapper">
-                    <div class="gallery-carousel-slides">
-                        <!-- Launch Circuit at Columbia University -->
-                        <div class="gallery-card">
-                            <img src="Launch Circuit.webp" alt="Launch Circuit at Columbia University" class="gallery-img">
-                            <div class="gallery-caption">
-                                <h3>Launch Circuit at Columbia University</h3>
-                            </div>
-                        </div>
-
-                        <!-- Ballin.jpg -->
-                        <div class="gallery-card">
-                            <img src="Ballin.jpg" alt="Playing Volleyball" class="gallery-img">
-                            <div class="gallery-caption">
-                                <h3>Playing Volleyball</h3>
-                            </div>
-                        </div>
-                        
-                        <!-- Hard at work.jpg -->
-                        <div class="gallery-card">
-                            <img src="Hard at work.jpg" alt="Performative" class="gallery-img">
-                            <div class="gallery-caption">
-                                <h3>Performative</h3>
-                            </div>
-                        </div>
-                        
-                        <!-- Hack RU Fall25.jpg -->
-                        <div class="gallery-card">
-                            <img src="Hack Fall RU25.jpg" alt="Ace It Team" class="gallery-img">
-                            <div class="gallery-caption">
-                                <h3>Ace It Team</h3>
-                            </div>
-                        </div>
-                        
-                        <!-- Bits 25.jpg -->
-                        <div class="gallery-card">
-                            <img src="Bits 25.jpg" alt="Bits Datathon Team" class="gallery-img">
-                            <div class="gallery-caption">
-                                <h3>Bits Datathon Team</h3>
-                            </div>
-                        </div>
-                    </div>
+        <section id="skills" class="section-muted">
+            <div class="container">
+                <div class="section-intro">
+                    <p class="eyebrow">Technical Skills</p>
+                    <h2 class="section-heading">Tools I use to research, build, and ship.</h2>
                 </div>
-                
-                <!-- Gallery Carousel Navigation -->
-                <div class="gallery-carousel-nav">
-                    <button class="gallery-carousel-btn gallery-prev-btn">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                    <div class="gallery-carousel-dots">
-                        <span class="gallery-dot active" data-index="0"></span>
-                        <span class="gallery-dot" data-index="1"></span>
-                        <span class="gallery-dot" data-index="2"></span>
-                        <span class="gallery-dot" data-index="3"></span>
-                        <span class="gallery-dot" data-index="4"></span>
+
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Languages</h3>
+                        <div class="skills-container">
+                            <span>Python</span><span>Java</span><span>TypeScript</span><span>JavaScript</span><span>SQL</span>
+                        </div>
                     </div>
-                    <button class="gallery-carousel-btn gallery-next-btn">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
+                    <div class="skill-category">
+                        <h3>ML / Data</h3>
+                        <div class="skills-container">
+                            <span>PyTorch</span><span>scikit-learn</span><span>Pandas</span><span>NumPy</span><span>Matplotlib</span><span>PySpark</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Web / Backend</h3>
+                        <div class="skills-container">
+                            <span>React</span><span>Next.js</span><span>Node.js</span><span>Express.js</span><span>REST APIs</span><span>Flutter</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Systems / Tools</h3>
+                        <div class="skills-container">
+                            <span>Git</span><span>Docker</span><span>AWS</span><span>MySQL</span><span>ROS</span><span>Figma</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Concepts</h3>
+                        <div class="skills-container">
+                            <span>Machine Learning</span><span>Computer Vision</span><span>Data Structures</span><span>Algorithms</span><span>Systems Design</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Coursework</h3>
+                        <div class="skills-container">
+                            <span>Data Structures & Algorithms</span><span>Machine Learning</span><span>Probability & Statistics</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
+        <section id="education">
+            <div class="container education-card">
+                <div>
+                    <p class="eyebrow">Education</p>
+                    <h2>Rutgers University</h2>
+                    <p>B.S. in Computer Science & Economics, expected May 2028</p>
+                </div>
+                <div class="education-meta">
+                    <span>GPA 3.75 / 4.0</span>
+                    <span>Newark, New Jersey</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications" class="section-muted">
+            <div class="container">
+                <div class="section-intro">
+                    <p class="eyebrow">Certifications</p>
+                    <h2 class="section-heading">Continuous learning.</h2>
+                </div>
+                <div class="cert-grid">
+                    <article class="cert-card">
+                        <h3>AWS Certified: Cloud Practitioner</h3>
+                        <p>In progress</p>
+                    </article>
+                    <article class="cert-card">
+                        <h3>Artificial Intelligence Foundations: Machine Learning</h3>
+                        <p>LinkedIn Learning - March 2025</p>
+                    </article>
+                    <article class="cert-card">
+                        <h3>Learning Git and GitHub</h3>
+                        <p>LinkedIn Learning - March 2025</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <div class="container">
+                <div class="section-intro">
+                    <p class="eyebrow">Beyond the Code</p>
+                    <h2 class="section-heading">Community, competitions, and campus work.</h2>
+                </div>
+                <div class="gallery-grid">
+                    <figure>
+                        <img src="Hack Fall RU25.jpg" alt="Ace It HackRU team">
+                        <figcaption>Ace It team at HackRU</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Bits 25.jpg" alt="BITS Datathon team">
+                        <figcaption>BITS Datathon team</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Hard at work.jpg" alt="Working on a technical project">
+                        <figcaption>Building and presenting</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Ballin.jpg" alt="Playing volleyball">
+                        <figcaption>Volleyball and campus life</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer>
-        <div class="container">
-            <div class="footer-content">
+        <div class="container footer-content">
+            <div>
                 <div class="footer-logo">MYH</div>
-                <p>Computer Science & Economics Student at Rutgers University</p>
-                <div class="footer-links">
-                    <a href="#about" class="footer-link">About</a>
-                    <a href="#projects" class="footer-link">Projects</a>
-                    <a href="#experience" class="footer-link">Experience</a>
-                    <a href="#gallery" class="footer-link">Gallery</a>
-                </div>
-                <div class="footer-social">
-                    <a href="https://www.linkedin.com/in/mohammedyhossain/" target="_blank" class="footer-social-link">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://github.com/MohammedYashHossain" target="_blank" class="footer-social-link">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://mohammedyhossainresume.tiiny.site" target="_blank" class="footer-social-link">
-                        <i class="fas fa-file-alt"></i>
-                    </a>
-                </div>
-                <div class="copyright">
-                    &copy; 2025 Mohammed Hossain. All rights reserved.
-                </div>
+                <p>Rutgers CS & Economics student building AI, ML, robotics, and software systems.</p>
             </div>
+            <div class="footer-links">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/mohammedyhossain/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/MohammedYashHossain" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="mailto:mohossain.swe@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://mohammedyhossainresume.tiiny.site" target="_blank" rel="noreferrer" aria-label="Resume"><i class="fas fa-file-alt"></i></a>
+            </div>
+            <p class="copyright">&copy; 2026 Mohammed Yash Hossain. All rights reserved.</p>
         </div>
     </footer>
 
