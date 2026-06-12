@@ -126,8 +126,8 @@ header.menu-open {
     position: absolute;
     inset: 0;
     background:
-        linear-gradient(115deg, rgba(17, 24, 39, 0.92) 0%, rgba(17, 24, 39, 0.76) 48%, rgba(127, 29, 29, 0.78) 100%),
-        url("Ideal.jpg") center / cover no-repeat;
+        linear-gradient(115deg, rgba(17, 24, 39, 0.9) 0%, rgba(17, 24, 39, 0.72) 46%, rgba(127, 29, 29, 0.72) 100%),
+        url("holidayhandoutsfounders.png") center 42% / cover no-repeat;
 }
 
 .hero-bg::after {
@@ -246,7 +246,7 @@ header.menu-open {
     width: 100%;
     aspect-ratio: 4 / 3;
     object-fit: cover;
-    object-position: center 22%;
+    object-position: center 42%;
     border-radius: 8px;
 }
 
@@ -373,6 +373,7 @@ section {
     width: 100%;
     aspect-ratio: 4 / 5;
     object-fit: cover;
+    object-position: center 28%;
     border-radius: 12px;
     box-shadow: var(--shadow);
 }
@@ -494,6 +495,84 @@ section {
     color: var(--primary);
     font-weight: 850;
     text-decoration: none;
+}
+
+.archive-projects {
+    margin-top: 42px;
+}
+
+.archive-heading {
+    margin-bottom: 18px;
+}
+
+.archive-heading h3 {
+    color: var(--ink);
+    font-size: 1.25rem;
+}
+
+.archive-track {
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.72);
+    mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%);
+}
+
+.archive-row {
+    display: flex;
+    width: max-content;
+    gap: 14px;
+    padding: 16px;
+    animation: archive-scroll 34s linear infinite;
+}
+
+.archive-track:hover .archive-row {
+    animation-play-state: paused;
+}
+
+.mini-project {
+    display: grid;
+    grid-template-columns: 74px 180px;
+    grid-template-rows: auto auto;
+    gap: 2px 12px;
+    align-items: center;
+    min-width: 300px;
+    padding: 10px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: #fff;
+    color: var(--ink);
+    text-decoration: none;
+    box-shadow: 0 10px 28px rgba(16, 24, 40, 0.06);
+}
+
+.mini-project img {
+    grid-row: 1 / 3;
+    width: 74px;
+    height: 58px;
+    border-radius: 8px;
+    object-fit: cover;
+    background: var(--surface-strong);
+}
+
+.mini-project span {
+    font-weight: 850;
+    line-height: 1.2;
+}
+
+.mini-project small {
+    color: var(--muted);
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+@keyframes archive-scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-50% - 7px));
+    }
 }
 
 .timeline {
@@ -652,6 +731,10 @@ footer {
         grid-column: span 1;
     }
 
+    .archive-row {
+        animation-duration: 42s;
+    }
+
     .timeline-date {
         position: static;
     }
@@ -718,6 +801,15 @@ footer {
 
     .project-img {
         min-height: 210px;
+    }
+
+    .archive-track {
+        mask-image: none;
+    }
+
+    .mini-project {
+        grid-template-columns: 64px 160px;
+        min-width: 260px;
     }
 
     .gallery-grid {
