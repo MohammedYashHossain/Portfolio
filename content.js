@@ -138,7 +138,9 @@ const portfolio = {
       "title": "Technical Specialist",
       "company": "Launch Circuit Labs - Rutgers University",
       "date": "Sept 2025 - Mar 2026",
-      "description": "Engineered full-stack applications for early-stage startup teams using React, Node.js, REST APIs, and SQL. Architected core AeroBin backend modules integrating real-time IoT sensor data with intelligent routing logic. Won Columbia CS3 accelerator."
+      "description": "Engineered full-stack applications for early-stage startup teams using React, Node.js, REST APIs, and SQL. Architected core AeroBin backend modules integrating real-time IoT sensor data with intelligent routing logic. Won Columbia CS3 accelerator.",
+      "url": "https://www.instagram.com/rutgerslaunchcircuit/",
+      "linkLabel": "Launch Circuit on Instagram"
     },
     {
       "title": "Machine Learning Engineering Intern",
@@ -150,19 +152,25 @@ const portfolio = {
       "title": "Mobile App Development Intern",
       "company": "Hairalyze - Remote",
       "date": "May 2025 - Aug 2026",
-      "description": "Engineered Flutter MVP components and integrated OpenAI API-powered personalized hair analysis. Improved performance across devices by debugging Dart code and refining state management."
+      "description": "Engineered Flutter MVP components and integrated OpenAI API-powered personalized hair analysis. Improved performance across devices by debugging Dart code and refining state management.",
+      "url": "https://apps.apple.com/us/app/hairalyze-smarter-haircare/id6744613045",
+      "linkLabel": "Hairalyze on the App Store"
     },
     {
       "title": "Founder, Head of Tech & Marketing",
       "company": "Holiday Handouts - Newark, New Jersey",
       "date": "Nov 2024 - Present",
-      "description": "Built and managed the organization's website, led digital outreach, and helped generate 100,000+ impressions through community-focused content and fundraising campaigns."
+      "description": "Built and managed the organization's website, led digital outreach, and helped generate 100,000+ impressions through community-focused content and fundraising campaigns.",
+      "url": "https://www.instagram.com/holidayhandouts/",
+      "linkLabel": "Holiday Handouts on Instagram"
     },
     {
       "title": "Software Engineer Intern",
       "company": "Reclip - Los Angeles, California (Remote)",
       "date": "Sept 2024 - Apr 2025",
-      "description": "Created a Python automation script to generate and schedule social media posts, reducing manual effort while supporting data-driven content strategy through research on consumer behavior and market trends."
+      "description": "Created a Python automation script to generate and schedule social media posts, reducing manual effort while supporting data-driven content strategy through research on consumer behavior and market trends.",
+      "url": "https://www.reclip.app/",
+      "linkLabel": "Visit Reclip"
     },
     {
       "title": "Software Engineer Fellow",
@@ -174,7 +182,9 @@ const portfolio = {
       "title": "Front-End Developer and Youth Club Team Lead",
       "company": "Narsingdi-Bhairab Association of New Jersey - Atlantic City, New Jersey",
       "date": "Sept 2022 - Present",
-      "description": "Designed and built a responsive website using HTML, CSS, and JavaScript, improved accessibility and engagement, and led beginner coding workshops for 20+ students."
+      "description": "Designed and built a responsive website using HTML, CSS, and JavaScript, improved accessibility and engagement, and led beginner coding workshops for 20+ students.",
+      "url": "https://nbanj.org/",
+      "linkLabel": "Visit NBANJ"
     }
   ],
   "skills": [
@@ -297,6 +307,10 @@ const portfolio = {
     {
       "image": "Ballin.jpg",
       "title": "Volleyball"
+    },
+    {
+      "image": "holidayhandoutsfounders.png",
+      "title": "Holiday Handouts Founders"
     }
   ],
   "updates": [
