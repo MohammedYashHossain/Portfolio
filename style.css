@@ -1210,3 +1210,44 @@ p {
   }
 
 }
+
+/* Personal highlights keep the same library layout, with room for the story. */
+.school-tag { flex-shrink: 0; padding: 5px 14px; border-left: 1px solid #444; }
+.school-tag strong { display: block; color: #f4d787; font-size: 12px; }
+.school-tag span { display: block; color: #aaa; font-size: 10px; margin-top: 4px; }
+.life-feature { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1fr); overflow: hidden; border: 1px solid #ffffff18; border-radius: 8px; background: #1c2821; }
+.volleyball-feature { background: #22232b; }
+.life-photo { position: relative; min-height: 370px; }
+.life-photo img { width: 100%; height: 100%; position: absolute; object-fit: cover; object-position: 50% 62%; }
+.life-photo span { position: absolute; left: 12px; right: 12px; bottom: 12px; width: fit-content; background: #000b; padding: 7px 10px; border-radius: 4px; font-size: 10px; }
+.life-copy { padding: 28px 24px; align-self: center; min-width: 0; }
+.life-copy .eyebrow { font-size: 8px; letter-spacing: 1.2px; }
+.life-copy h1, .life-copy h2 { font-size: clamp(27px, 2.5vw, 38px); letter-spacing: -1.2px; margin-bottom: 17px; line-height: 1.08; }
+.life-copy p { color: #c3c7c4; font-size: 12px; line-height: 1.8; }
+.life-copy small { display: block; margin-top: 12px; color: #a7b1aa; font-size: 10px; }
+.life-copy .green-button { font-size: 11px; line-height: 1.5; padding: 11px 16px; }
+.impact-stats { display: flex; flex-wrap: wrap; gap: 25px; margin: 22px 0; padding: 18px 0; border-top: 1px solid #ffffff18; border-bottom: 1px solid #ffffff18; }
+.impact-stats strong { display: block; font-size: 36px; letter-spacing: -1.5px; }
+.community-feature .impact-stats strong { color: #86e4a3; }
+.volleyball-feature .impact-stats strong { color: #c0b9fa; }
+.impact-stats span { display: block; color: #bbb; font-size: 10px; margin-top: 5px; }
+#view > .life-feature:first-child { margin-top: 20px; }
+@media (min-width: 761px) and (max-width: 1050px) {
+  .brand { width: auto; }
+  .brand > span:last-child { display: none; }
+  .top-resume span { display: none; }
+}
+@media (max-width: 760px) {
+  .topbar { height: 94px; flex-wrap: wrap; gap: 5px 10px; }
+  .school-tag { order: 5; border: 0; padding: 0; width: 100%; display: flex; justify-content: center; align-items: center; gap: 9px; }
+  .school-tag strong { font-size: 11px; }
+  .school-tag span { margin: 0; font-size: 10px; }
+  .workspace { height: calc(100dvh - 174px); }
+  .life-feature { grid-template-columns: 1fr; }
+  .life-photo { min-height: 0; aspect-ratio: 1.2; }
+  .life-photo img { object-position: 50% 66%; }
+  .volleyball-feature .life-photo { aspect-ratio: 1; }
+  .life-copy { padding: 25px 22px; }
+  .life-copy h1, .life-copy h2 { font-size: 33px; }
+  .life-copy p { font-size: 13px; }
+}

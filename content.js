@@ -273,9 +273,9 @@ const portfolio = {
     }
   ],
   "about": [
-    "I have been interested in computers since I was young, and gradually turning that curiosity into real projects. Today, I study Computer Science and Economics at Stockton University and focus on machine learning, data-driven systems, and production-ready software.",
-    "Recently, I have been creating projects with Python, AI, machine learning models, robotics, and startup-focused web development. I like work that moves from idea to something people can actually use, whether that is an ML model, a full-stack product, or a tool for a community organization.",
-    "Outside of tech, I play a LOT of volleyball, create content, and help run Holiday Handouts, a nonprofit I started with my roommates to support the Newark community. I don't want to be the typical CS Major, but builder, teammate, and community-minded."
+    "I’m Mohammed, but a lot of people know me as Yash. I study Computer Science and Economics at Stockton University. I grew up building computers, and now I spend a lot of my time making software and figuring out how things work.",
+    "I’ve worked on robotics, machine learning, apps, and startup projects. I like getting into the details and making something that actually works. You can check out the projects and internships here to see what I’ve been up to.",
+    "Outside of that, I play a LOT of volleyball and post on TikTok as @volley.hossain — over 6 million views and 500+ followers so far. I also started Holiday Handouts with my roommates. We’ve fed 500+ people and give back to kids and neighbors in Newark. Both are a big part of who I am."
   ],
   "gallery": [
     {
